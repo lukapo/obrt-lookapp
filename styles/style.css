@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Condiment&display=swap");
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #262626;
+  line-height: 1.5;
+  height: 100vh;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: "Condiment", cursive;
+  font-size: 3rem;
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #FFF;
+  color: #262626;
+  padding: 0.5rem;
+  align-items: center;
+}
+header h1 a {
+  text-decoration: none;
+  color: #262626;
+  padding: 5px;
+}
+header h1 a:hover {
+  color: darkgray;
+}
+header nav {
+  width: 60%;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+header nav li {
+  margin-right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px;
+  -webkit-text-decoration: underline 1px black;
+          text-decoration: underline 1px black;
+  text-underline-offset: 3px;
+}
+header nav li a {
+  color: #262626;
+}
+header nav li a:link, header nav li a:visited {
+  color: #262626;
+}
+header nav li a:hover {
+  color: darkgrey;
+}
+
+.last_paragraph {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0.5rem auto;
+}
+
+main {
+  padding: 2rem;
+  color: #262626;
+  font-weight: 500;
+  width: 60%;
+  margin: 0 auto;
+}
+
+article {
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+}
+article p {
+  text-align: justify;
+}
+article p a {
+  border: 1px black;
+  border-style: groove;
+  color: darkgreen;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+article p a:hover {
+  color: darkgoldenrod;
+}
+article img {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 60vh;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+}
+
+footer {
+  background-color: #FFF;
+  color: #262626;
+  padding: 1rem;
+}
+footer .contact {
+  margin-bottom: 1rem;
+}
+footer .contact a {
+  color: #262626;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+footer .contact a:hover {
+  border: 1px solid #262626;
+  box-shadow: 2px 2px 2px black;
+}
+footer img {
+  width: 50px;
+  float: left;
+  margin-right: 10px;
+}
+footer .facebook {
+  margin: 10px;
+}
+footer > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer > div:first-child {
+  flex-basis: 50%;
+}
+footer > div:nth-child(2), footer > div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*    &>* {
+
+     } */
+}
+footer p {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 933px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  li a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 785px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  li a {
+    font-size: 0.8rem;
+  }
+  ul li {
+    line-height: 0;
+  }
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  main {
+    width: 90%;
+  }
+  header {
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav li {
+    margin: 0.5rem 0;
+    padding: 4px;
+  }
+  footer > div {
+    flex-direction: column;
+  }
+  footer > div > * {
+    width: 80%;
+  }
+}
+body > div {
+  background: url("../images/minions.jpg") center center/cover no-repeat;
+}/*# sourceMappingURL=style.css.map */
