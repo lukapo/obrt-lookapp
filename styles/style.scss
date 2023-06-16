@@ -10,14 +10,37 @@ $mainColor2: #FFF;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
     background-color: $mainColor1;
     line-height: 1.5;
     height: 100vh;
+
+}
+
+body>div {
+    background: url('../images/minions.jpg') center center/cover no-repeat;
+}
+.sticky {
+    position: fixed;
+    top: 4vh;
+    right: 0.6vw;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    background-color: white;
+    transition: transform 1s ease;
+    &:hover {
+        transform: rotate(360deg);
+    }
 }
 
 
 h2 {
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -47,33 +70,36 @@ header {
 
     nav {
         width: 60%;
-    }
-    nav ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
-    }
+        
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
 
-    nav li {
-        margin-right: 1rem;
-        font-size: 1rem;
-        cursor: pointer;
-        padding: 5px;
-        text-decoration: underline 1px black;
-        text-underline-offset: 3px;
-
-        & a {
-            color: $mainColor1;
-
-            &:link,
-            &:visited {
+        li {
+            margin-right: 1rem;
+            cursor: pointer;
+            padding: 5px;;
+            text-underline-offset: 3px;
+    
+            & a {
                 color: $mainColor1;
-            }
-            &:hover {
-                color: darkgrey;
+                font-size: 1.2rem;
+                text-decoration: none;
+    
+                &:link,
+                &:visited {
+                    color: $mainColor1;
+                }
+                &:hover {
+                    color: darkgrey;
+                }
             }
         }
     }
+     
+
 }
 
 .last_paragraph {
@@ -92,25 +118,28 @@ main {
 article {
     border: 1px solid black;
     box-shadow: 2px 2px 2px black;
+    border-radius: 20px;
     margin-bottom: 2rem;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 1rem;
     p {
         text-align: justify;
-    }
-    p a {
-        border: 1px black;
-        border-style: groove;
-        color: darkgreen;
-        text-decoration: none;
-        padding-left: 5px;
-        padding-right: 5px;
-        background-color: rgba(255, 255, 255, 0.5);
-
-        &:hover {
-            color: darkgoldenrod;
+        font-size: 1.1rem;
+        a {
+            border: 1px black;
+            border-style: groove;
+            color: black;;
+            text-decoration: none;
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+    
+            &:hover {
+                color: darkgoldenrod;
+            }
         }
     }
+
     img {
         width: 100%;
     }
@@ -122,6 +151,7 @@ iframe {
     width: 100%;
     height: 60vh;
     border: 1px solid black;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px black;
 }
 
@@ -130,23 +160,31 @@ footer {
     color: $mainColor1;
     padding: 1rem;
 
-    .contact {
+    #contact {
         margin-bottom: 1rem;
-    }
-    .contact a {
-        color: $mainColor1;
-        margin-right: 1rem;
-        text-decoration: none;
-        transition: color 0.3s ease;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        padding: 10px;
-        &:hover {
-            border: 1px solid $mainColor1;
-            box-shadow: 2px 2px 2px black;
+
+        a {
+            color: $mainColor1;
+            margin-right: 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            &:hover {
+                border: 1px solid $mainColor1;
+                box-shadow: 2px 2px 2px black;
+            }
         }
+
+      
+    
     }
+
 
     img {
         width: 50px;
@@ -158,45 +196,53 @@ footer {
         margin: 10px;
     }
 
-    &>div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        &:first-child {
-            flex-basis: 50%;
-        }
-
-        &:nth-child(2),
-        &:nth-child(3) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         /*    &>* {
-
-            } */
-        }
-    }
     p {
         text-align: center;
         font-style: italic;
     }
 }
 
+.map {
+    width: 50%;
+    height: 20%;
+    margin: 1rem auto;
+    display: block;
+}
+
+section {
+    margin-top: 0.5rem;
+}
+
 /* Media queries for responsive design */
 
-@media (max-width: 933px) { 
-    h1 {
-        font-size: 1.5rem;
-    }
+@media (max-width: 934px) { 
+
     li a {
         font-size: 0.8rem;
     }
+     main {
+        padding: 1rem;
+        width: 85vw;
+    } 
+
+    article {
+        p {
+            text-align: left;
+        }
+    }
+    .sticky {
+        width: 40px;
+        right: 1vw;
+        top: 4vh;
+    }
+
+
 
 }
 @media (max-width: 785px) {
-    h1 {
-        font-size: 1.5rem;
+    .sticky {
+        width: 40px;
+        right: 1vw;
     }
     li a {
         font-size: 0.8rem;
@@ -209,8 +255,10 @@ footer {
         line-height: 1.5;
     }
 
-    main {
-        width: 90%;
+    article {
+        p {
+            text-align: left;
+        }
     }
 
     header {
@@ -236,6 +284,3 @@ footer {
 }
 
 
-body>div {
-    background: url('../images/minions.jpg') center center/cover no-repeat;
-}
