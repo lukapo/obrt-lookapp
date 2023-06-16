@@ -15,12 +15,14 @@ body {
     background-color: $mainColor1;
     line-height: 1.5;
     height: 100vh;
+    width: 100vw;
 
 }
 
 body>div {
     background: url('../images/minions.jpg') center center/cover no-repeat;
 }
+
 .sticky {
     position: fixed;
     top: 4vh;
@@ -33,6 +35,7 @@ body>div {
     cursor: pointer;
     background-color: white;
     transition: transform 1s ease;
+
     &:hover {
         transform: rotate(360deg);
     }
@@ -58,10 +61,12 @@ header {
     color: $mainColor1;
     padding: 0.5rem;
     align-items: center;
+
     h1 a {
         text-decoration: none;
         color: $mainColor1;
         padding: 5px;
+
         &:hover {
             color: darkgray;
         }
@@ -70,7 +75,7 @@ header {
 
     nav {
         width: 60%;
-        
+
         ul {
             display: flex;
             list-style: none;
@@ -80,25 +85,27 @@ header {
         li {
             margin-right: 1rem;
             cursor: pointer;
-            padding: 5px;;
+            padding: 5px;
+            ;
             text-underline-offset: 3px;
-    
+
             & a {
                 color: $mainColor1;
                 font-size: 1.2rem;
                 text-decoration: none;
-    
+
                 &:link,
                 &:visited {
                     color: $mainColor1;
                 }
+
                 &:hover {
                     color: darkgrey;
                 }
             }
         }
     }
-     
+
 
 }
 
@@ -107,12 +114,13 @@ header {
     margin: 0.5rem auto;
 
 }
+
 main {
     padding: 2rem;
     color: $mainColor1;
     font-weight: 500;
     width: 60%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 article {
@@ -122,18 +130,21 @@ article {
     margin-bottom: 2rem;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 1rem;
+
     p {
         text-align: justify;
         font-size: 1.1rem;
+
         a {
             border: 1px black;
             border-style: groove;
-            color: black;;
+            color: black;
+            ;
             text-decoration: none;
             padding-left: 5px;
             padding-right: 5px;
             background-color: rgba(255, 255, 255, 0.5);
-    
+
             &:hover {
                 color: darkgoldenrod;
             }
@@ -175,14 +186,15 @@ footer {
             justify-content: center;
             align-items: center;
             padding: 10px;
+
             &:hover {
                 border: 1px solid $mainColor1;
                 box-shadow: 2px 2px 2px black;
             }
         }
 
-      
-    
+
+
     }
 
 
@@ -215,45 +227,57 @@ section {
 
 /* Media queries for responsive design */
 
-@media (max-width: 934px) { 
+@media (max-width: 934px) {
 
     li a {
         font-size: 0.8rem;
     }
-     main {
+
+    main {
         padding: 1rem;
         width: 85vw;
-    } 
+    }
 
     article {
         p {
             text-align: left;
         }
     }
+
     .sticky {
-        width: 40px;
+        width: 20px;
         right: 1vw;
-        top: 4vh;
+        top: 12vh;
+    }
+
+    ul li {
+        line-height: 1;
+        margin: 0px;
+        padding: 0px;
+
     }
 
 
 
 }
+
 @media (max-width: 785px) {
-    .sticky {
-        width: 40px;
-        right: 1vw;
-    }
-    li a {
-        font-size: 0.8rem;
-    }
-    ul li {
-        line-height: 0;
-    }
     body {
         font-size: 14px;
         line-height: 1.5;
     }
+
+    .sticky {
+        width: 30px;
+        right: 1vw;
+        top: 15vh;
+    }
+
+    li a {
+        font-size: 0.8rem;
+    }
+
+
 
     article {
         p {
@@ -275,12 +299,13 @@ section {
         padding: 4px;
     }
 
-    footer>div {
-        flex-direction: column;
-        &>* {
-            width: 80%;
+    footer {
+        #contact {
+            flex-direction: column;
+
+            &>* {
+                width: 80%;
+            }
         }
     }
 }
-
-
