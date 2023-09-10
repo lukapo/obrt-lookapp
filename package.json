@@ -1,0 +1,44 @@
+{
+  "name": "obrt-lookapp",
+  "version": "1.0.0",
+  "description": "Web stranica obrta LookApp i njegovu djelatnost: Najam napuhanaca.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukapo/obrt-lookapp.git"
+  },
+  "keywords": [
+    "lookapp",
+    "napuhanci",
+    "luka",
+    "postruzin",
+    "dvorac",
+    "napuhavanje",
+    "tobogan",
+    "inflatables",
+    "slide",
+    "oroslavje"
+  ],
+  "author": "Luka Postružin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukapo/obrt-lookapp/issues"
+  },
+  "homepage": "https://github.com/lukapo/obrt-lookapp#readme",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.66.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
